@@ -1,7 +1,13 @@
 const Header = () => {
   return (
-    <div>Header</div>
-  )
-}
+    <header>
+      <div>
+        <h1>AWESOME FOOD STORE</h1>
+      </div>
 
-export default Header
+      <div></div>
+    </header>
+  );
+};
+
+export default Header;
