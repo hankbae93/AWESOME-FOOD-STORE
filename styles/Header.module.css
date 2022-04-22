@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  height: 94px;
+  background: none;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  line-height: normal;
+  font-size: 24px !important;
+}
+
+.logo a,
+.logo:hover a {
+  cursor: pointer;
+  color: black;
+}
+
+.nav {
+  flex: 1;
+  justify-content: center;
+  border: none;
+}
+
+.navLink a,
+.navLink:hover a {
+  font-size: 24px;
+}
