@@ -1,7 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
+import styles from '../styles/Layout.module.css';
 import { Layout as AntdLayout } from 'antd';
-import Header from './Header';
+import Header from './header';
 
 const { Content, Footer } = AntdLayout;
 
@@ -20,7 +21,9 @@ const Layout = ({ children }: LayoutProps) => {
 
       <AntdLayout className="container">
         <Header />
-        <Content>{children}</Content>
+        <Content>
+          <div className={styles.content}>{children}</div>
+        </Content>
         <Footer>@ 2018 purpleworks</Footer>
       </AntdLayout>
     </>

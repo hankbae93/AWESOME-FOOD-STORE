@@ -1,0 +1,31 @@
+.container {
+  width: 1024px;
+}
+
+.row {
+  margin: 24px -16px 0;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: flex-start;
+  height: 422px;
+}
+
+.col {
+  flex: 1;
+  flex-grow: 0;
+  flex-basis: 20%;
+  padding: 16px;
+}
+
+.card {
+  background: #e4e4e4;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: 50% 50%;
+  border-radius: 8px;
+  cursor: pointer;
+  height: 180px;
+}

@@ -32,3 +32,9 @@ ul {
   height: 100vh;
   background: none;
 }
+
+.ant-menu-horizontal,
+.ant-menu-item::after,
+.ant-menu-submenu::after {
+  border: none !important;
+}

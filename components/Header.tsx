@@ -26,7 +26,7 @@ const Header = () => {
   return (
     <>
       <AntdHeader className={styles.container}>
-        <Title id={styles.logo}>
+        <Title className={styles.logo}>
           <Link href="/" passHref>
             <a>
               AWESOME <br />

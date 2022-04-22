@@ -1,11 +1,10 @@
 import { Typography } from 'antd';
-import styles from '../styles/About.module.css';
 
 const { Paragraph, Title } = Typography;
 
 const About = () => {
   return (
-    <div className={styles.container}>
+    <div>
       <div>
         <Title level={2}>ABOUT</Title>
         <Paragraph>
