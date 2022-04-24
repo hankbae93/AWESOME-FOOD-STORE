@@ -13,13 +13,13 @@
     "axios": "^0.26.1",
     "json-server": "^0.17.0",
     "next": "12.1.5",
-    "react": "18.0.0",
-    "react-dom": "18.0.0"
+    "react": "^17.0.0-rc.0",
+    "react-dom": "^17.0.0-rc.0"
   },
   "devDependencies": {
     "@types/node": "17.0.25",
     "@types/react": "17.0.39",
-    "@types/react-dom": "18.0.1",
+    "@types/react-dom": "17.0.39",
     "eslint": "8.13.0",
     "eslint-config-next": "12.1.5",
     "eslint-config-prettier": "^8.5.0",
