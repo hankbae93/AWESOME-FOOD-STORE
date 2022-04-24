@@ -1,10 +1,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
-import { Layout, Menu, Typography } from 'antd';
 import styles from '../styles/Header.module.css';
-
-const { Title } = Typography;
-const { Header: AntdHeader } = Layout;
+import useAntDesign from '../hooks/useAntDesign';
 
 interface LinkProps {
   href: string;
@@ -12,6 +9,7 @@ interface LinkProps {
 }
 
 const Header = () => {
+  const { AntdHeader, Menu, Title } = useAntDesign();
   const [links] = useState<LinkProps[]>([
     {
       href: '/about',

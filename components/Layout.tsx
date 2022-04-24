@@ -1,16 +1,16 @@
 import React from 'react';
 import Head from 'next/head';
 import styles from '../styles/Layout.module.css';
-import { Layout as AntdLayout } from 'antd';
 import Header from './header';
-
-const { Content, Footer } = AntdLayout;
+import useAntDesign from '../hooks/useAntDesign';
 
 interface LayoutProps {
   children: React.ReactNode;
 }
 
 const Layout = ({ children }: LayoutProps) => {
+  const { AntdLayout, Content, Footer } = useAntDesign();
+
   return (
     <>
       <Head>

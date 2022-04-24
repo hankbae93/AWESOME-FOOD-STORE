@@ -1,5 +1,5 @@
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import { useState, useEffect, useRef } from 'react';
 
 const Custom400 = () => {
   const router = useRouter();
@@ -15,7 +15,7 @@ const Custom400 = () => {
     if (timer === 0) {
       router.push('/');
     }
-  }, [timer]);
+  }, [timer, router]);
 
   return (
     <div>

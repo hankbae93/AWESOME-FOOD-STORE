@@ -1,8 +1,9 @@
-import { Typography } from 'antd';
+import type { NextPage } from 'next';
+import useAntDesign from '../hooks/useAntDesign';
 
-const { Paragraph, Title } = Typography;
+const About: NextPage = () => {
+  const { Paragraph, Title } = useAntDesign();
 
-const About = () => {
   return (
     <div>
       <div>

@@ -1,18 +1,16 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Row, Col, Typography } from 'antd';
 import styles from '../styles/Store.module.css';
-import Modal from '../components/modal';
 import { StoreObjType } from '../types';
-
-const { Title } = Typography;
-
+import Modal from '../components/modal';
+import useAntDesign from '../hooks/useAntDesign';
 interface ModalState {
   show: boolean;
   id: number | null;
 }
 
 const Store = () => {
+  const { Row, Col, Title } = useAntDesign();
   const [list, setList] = useState<StoreObjType[]>([]);
   const [modalState, setModalState] = useState<ModalState>({
     id: null,
@@ -29,17 +27,8 @@ const Store = () => {
     getData();
   }, []);
 
-  const showModal = (id: number) => {
-    setModalState((prev) => ({ id, show: true }));
-  };
-
-  const handleOk = () => {
-    setModalState((prev) => ({ id: null, show: false }));
-  };
-
-  const handleCancel = () => {
-    setModalState((prev) => ({ id: null, show: false }));
-  };
+  const showModal = (id: number) => setModalState({ id, show: true });
+  const handleCancel = () => setModalState({ id: null, show: false });
 
   return (
     <>
@@ -58,18 +47,15 @@ const Store = () => {
                   <div
                     className={styles.card}
                     style={{ backgroundImage: `url(${item.thumb})` }}
-                  ></div>
+                  />
                 </Col>
               );
             })}
           </Row>
         </div>
       </div>
-      <Modal
-        modalState={modalState}
-        handleOk={handleOk}
-        handleCancel={handleCancel}
-      />
+
+      <Modal modalState={modalState} handleCancel={handleCancel} />
     </>
   );
 };

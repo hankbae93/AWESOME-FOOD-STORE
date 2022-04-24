@@ -2,11 +2,9 @@ import { MouseEvent, useEffect, useState } from 'react';
 import axios from 'axios';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Col, Modal as AntdModal, Row, Typography } from 'antd';
+import useAntDesign from '../hooks/useAntDesign';
 import styles from '../styles/Modal.module.css';
 import { StoreObjType } from '../types';
-
-const { Title, Paragraph } = Typography;
 
 interface ModalProps {
   modalState?: {
@@ -17,6 +15,7 @@ interface ModalProps {
 }
 
 const Modal = ({ modalState, handleCancel }: ModalProps) => {
+  const { Col, AntdModal, Title, Paragraph, Row } = useAntDesign();
   const [data, setData] = useState<StoreObjType>();
 
   useEffect(() => {
