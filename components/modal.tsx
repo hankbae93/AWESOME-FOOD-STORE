@@ -21,7 +21,7 @@ const Modal = ({ modalState, handleCancel }: ModalProps) => {
   const getDatas = async (id: number) => {
     try {
       const { data }: { data: StoreObjType } = await axios.get(
-        `http://localhost:9000/storesㅇ/${id}`
+        `http://localhost:9000/stores/${id}`
       );
       setData(data);
     } catch (err) {
