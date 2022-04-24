@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Row, Col } from 'antd';
+import { Row, Col, Typography } from 'antd';
 import styles from '../styles/Store.module.css';
 import Modal from '../components/modal';
 import { StoreObjType } from '../types';
+
+const { Title } = Typography;
 
 interface ModalState {
   show: boolean;
@@ -42,7 +44,7 @@ const Store = () => {
   return (
     <>
       <div>
-        <h2>STORE</h2>
+        <Title level={2}>STORE</Title>
 
         <div className={styles.container}>
           <Row className={styles.row}>
