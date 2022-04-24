@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev & yarn json-server -p 9000 db.json ",
+    "dev": "next dev & yarn json-server -p 9000 db.json",
     "build": "next build",
-    "start": "next start",
+    "start": "next start & yarn json-server -p 9000 db.json",
     "lint": "next lint"
   },
   "dependencies": {
