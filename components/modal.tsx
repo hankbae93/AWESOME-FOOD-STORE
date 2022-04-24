@@ -16,19 +16,38 @@ interface ModalProps {
 
 const Modal = ({ modalState, handleCancel }: ModalProps) => {
   const { Col, AntdModal, Title, Paragraph, Row } = useAntDesign();
-  const [data, setData] = useState<StoreObjType>();
+  const [data, setData] = useState<StoreObjType | null>(null);
 
-  useEffect(() => {
-    const getDatas = async (id: number) => {
+  const getDatas = async (id: number) => {
+    try {
       const { data }: { data: StoreObjType } = await axios.get(
-        `http://localhost:9000/stores/${id}`
+        `http://localhost:9000/storesㅇ/${id}`
       );
       setData(data);
-    };
+    } catch (err) {
+      console.error(err);
+      setData(null);
+    }
+  };
+
+  useEffect(() => {
     if (modalState?.show && modalState?.id !== null) {
       getDatas(modalState.id);
     }
   }, [modalState?.show, modalState?.id]);
+
+  if (!data) {
+    return (
+      <AntdModal
+        className={styles.container}
+        visible={modalState?.show}
+        onCancel={handleCancel}
+        footer={null}
+      >
+        <Paragraph>현재 데이터를 찾을 수 없습니다.</Paragraph>
+      </AntdModal>
+    );
+  }
 
   return (
     <AntdModal

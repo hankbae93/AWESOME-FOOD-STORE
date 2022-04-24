@@ -17,6 +17,12 @@
   padding: 16px;
 }
 
+.errorCol {
+  flex: 1;
+  flex-basis: auto;
+  padding: 16px;
+}
+
 .card {
   background: #e4e4e4;
   height: auto;
