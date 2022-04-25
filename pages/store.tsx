@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import axios from 'axios';
+import useAntDesign from '../hooks/useAntDesign';
 import styles from '../styles/Store.module.css';
 import { StoreObjType } from '../types';
 import Modal from '../components/modal';
-import useAntDesign from '../hooks/useAntDesign';
 interface ModalState {
   show: boolean;
   id: number | null;
