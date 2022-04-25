@@ -21,8 +21,8 @@ const Layout = ({ children }: LayoutProps) => {
 
       <AntdLayout className="container">
         <Header />
-        <Content>
-          <div className={styles.content}>{children}</div>
+        <Content className={styles.content}>
+          <section className={styles.section}>{children}</section>
         </Content>
         <Footer>@ 2018 purpleworks</Footer>
       </AntdLayout>

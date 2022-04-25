@@ -44,7 +44,9 @@ const Modal = ({ modalState, handleCancel }: ModalProps) => {
         onCancel={handleCancel}
         footer={null}
       >
-        <Paragraph>현재 데이터를 찾을 수 없습니다.</Paragraph>
+        <Paragraph className={styles.emptyMessage}>
+          현재 데이터를 찾을 수 없습니다.
+        </Paragraph>
       </AntdModal>
     );
   }

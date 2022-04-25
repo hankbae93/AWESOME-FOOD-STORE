@@ -25,6 +25,14 @@
   margin-left: 0;
 }
 
+.emptyMessage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
 .left {
   height: 100%;
   max-width: none;

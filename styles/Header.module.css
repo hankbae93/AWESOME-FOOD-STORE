@@ -15,10 +15,10 @@
   font-size: 24px !important;
 }
 
-.logo a,
-.logo:hover a {
-  cursor: pointer;
-  color: black;
+.logoLink,
+.logoLink:hover {
+  cursor: pointer !important;
+  color: black !important;
 }
 
 .nav {
